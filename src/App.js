@@ -5,7 +5,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p>
-          Edit <code>WORLDME</code> and save to reload.
+          Este proyecto de de una tienda online de ropas
         </p>
         <a
           className="App-link"
@@ -13,7 +13,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          VER PROYECTO
         </a>
       </header>
     </div>
