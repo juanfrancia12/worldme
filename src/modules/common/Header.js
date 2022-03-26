@@ -124,14 +124,3 @@ export const Header = () => {
     </>
   );
 };
-
-{
-  /* <Link key={id} to={`${link}`}>
-                  <li
-                    className="nav__item nav__item--select"
-                    onClick={(e) => menuToggle(e)}
-                  >
-                    {name}
-                  </li>
-                </Link> */
-}

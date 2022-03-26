@@ -1,10 +1,7 @@
-// map-get($light, "background"); -- example
-
 .title {
   font-weight: bold;
   font-size: 1.5rem;
   line-height: 140%;
-  // text-shadow: 1px 1px 3px rgb(225 225 225);
 
   &__additional{
     font-size: 1.3rem;
@@ -34,7 +31,6 @@
 }
 
 .subtitle {
-  // text-shadow: 1px 1px 3px rgb(225 225 225);
 }
 
 .icon {
@@ -70,10 +66,6 @@
     outline: 1px solid gray;
   }
 }
-
-// .icon{
-//   height: 3rem;
-// }
 
 .section {
   display: grid;

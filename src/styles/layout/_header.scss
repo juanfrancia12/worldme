@@ -5,7 +5,6 @@
   min-height: map-get($global, "min__height--header");
   padding: map-get($global, "padding__mobile");
   background-color: map-get($light, "background");
-  // border-bottom: 1px solid #b2bec3;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   z-index: 1;
 
@@ -117,7 +116,6 @@
       left: 0;
       transform-origin: right;
       transform: scaleX(0);
-      // transition: transform 0.3s ease-in-out;
       transition: transform map-get($global, "transition__linear");
     }
 
@@ -143,7 +141,6 @@
         left: 0;
         transform-origin: left;
         transform: scaleX(1);
-        // transition: transform 0.3s ease-in-out;
         transition: transform map-get($global, "transition__linear");
       }
     }
