@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/worldme/static/css/main.9a3dc004.css",
+    "main.js": "/worldme/static/js/main.cbd3d0fe.js",
+    "static/js/287.6d3885a3.chunk.js": "/worldme/static/js/287.6d3885a3.chunk.js",
+    "static/js/290.2c66a0ff.chunk.js": "/worldme/static/js/290.2c66a0ff.chunk.js",
+    "static/js/957.0ec9dd06.chunk.js": "/worldme/static/js/957.0ec9dd06.chunk.js",
+    "static/js/65.8c7cbe8c.chunk.js": "/worldme/static/js/65.8c7cbe8c.chunk.js",
+    "static/js/792.f2d84a40.chunk.js": "/worldme/static/js/792.f2d84a40.chunk.js",
+    "static/js/379.b7c32610.chunk.js": "/worldme/static/js/379.b7c32610.chunk.js",
+    "static/js/357.082a1f41.chunk.js": "/worldme/static/js/357.082a1f41.chunk.js",
+    "static/js/507.b16065cc.chunk.js": "/worldme/static/js/507.b16065cc.chunk.js",
+    "static/js/856.04acdd35.chunk.js": "/worldme/static/js/856.04acdd35.chunk.js",
+    "static/media/1.jpg": "/worldme/static/media/1.ba78e7c7f1f04616c3b0.jpg",
+    "static/media/3.jpg": "/worldme/static/media/3.3e315452599bbf8d2de1.jpg",
+    "static/media/2.jpg": "/worldme/static/media/2.7f5fb400fc916c3461d2.jpg",
+    "static/media/4.jpg": "/worldme/static/media/4.2357d46c3cb32185917c.jpg",
+    "index.html": "/worldme/index.html",
+    "main.9a3dc004.css.map": "/worldme/static/css/main.9a3dc004.css.map",
+    "main.cbd3d0fe.js.map": "/worldme/static/js/main.cbd3d0fe.js.map",
+    "287.6d3885a3.chunk.js.map": "/worldme/static/js/287.6d3885a3.chunk.js.map",
+    "290.2c66a0ff.chunk.js.map": "/worldme/static/js/290.2c66a0ff.chunk.js.map",
+    "957.0ec9dd06.chunk.js.map": "/worldme/static/js/957.0ec9dd06.chunk.js.map",
+    "65.8c7cbe8c.chunk.js.map": "/worldme/static/js/65.8c7cbe8c.chunk.js.map",
+    "792.f2d84a40.chunk.js.map": "/worldme/static/js/792.f2d84a40.chunk.js.map",
+    "379.b7c32610.chunk.js.map": "/worldme/static/js/379.b7c32610.chunk.js.map",
+    "357.082a1f41.chunk.js.map": "/worldme/static/js/357.082a1f41.chunk.js.map",
+    "507.b16065cc.chunk.js.map": "/worldme/static/js/507.b16065cc.chunk.js.map",
+    "856.04acdd35.chunk.js.map": "/worldme/static/js/856.04acdd35.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9a3dc004.css",
+    "static/js/main.cbd3d0fe.js"
+  ]
+}

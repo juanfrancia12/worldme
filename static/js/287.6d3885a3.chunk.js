@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkworldme=self.webpackChunkworldme||[]).push([[287],{287:function(n,e,r){r.r(e),r.d(e,{default:function(){return c}});r(791);var u=r(184),t=function(){return(0,u.jsx)("div",{children:"index basics"})},c=function(){return(0,u.jsx)(t,{})}}}]);
+//# sourceMappingURL=287.6d3885a3.chunk.js.map
