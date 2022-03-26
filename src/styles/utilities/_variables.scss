@@ -1,0 +1,45 @@
+// map-get($light, "background"); -- example
+
+$breakpoint__tablet: 1000px; //1000px
+$breakpoint__mobile: 780px;
+$breakpoint__desktop: 1300px;
+
+$breakpoint: (
+  "less_mobile": 450px,
+  "mobile": 780px,
+  "last_mobile": 533px, // 540px
+  "tablet": 1000px,
+  "desktop": 1300px,
+);
+
+$global: (
+  "min__height--header": 1rem,
+  "padding__mobile": 0 1rem,
+  "padding__tablet": 0 2.5rem,
+  "padding__desktop": 0 4rem,
+  "transition__linear": 0.3s linear,
+  "transition__ease": 3s ease,
+);
+
+// TODO: LIGHT
+
+$light: (
+  "background": rgb(241, 241, 241),
+  "background__hover": rgb(228, 228, 228),
+  "color__border": #c9c7c7,
+  "box__shadow": (
+    0 10px 15px -3px rgb(0 0 0 / 10%),
+    0 4px 6px -2px rgb(0 0 0 / 5%),
+  ),
+  "button__primary": red,
+);
+
+// TODO: DARK
+
+$dark: (
+  "background": #1e272e,
+  "background__hover": null,
+  "color__border": null,
+  "box__shadow": 0 0 1rem rgba(0, 0, 0, 0.5),
+  "button__primary": null,
+);

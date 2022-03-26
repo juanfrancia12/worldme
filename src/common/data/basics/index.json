@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "image": "",
+    "description_short": "",
+    "description_long": "",
+    "brand": "",
+    "type": "",
+    "color": [],
+    "size": [],
+    "price": 100,
+    "is_discount": true,
+    "discount_rate": 10,
+    "discount_type": "percentage"
+  },
+  {
+    "id": 2,
+    "image": "",
+    "description_short": "",
+    "description_long": "",
+    "brand": "",
+    "type": "",
+    "color": [],
+    "size": [],
+    "price": 400,
+    "is_discount": true,
+    "discount_rate": 5,
+    "discount_type": "amount"
+  },
+  {
+    "id": 3,
+    "image": "",
+    "description_short": "",
+    "description_long": "",
+    "brand": "",
+    "type": "",
+    "color": [],
+    "size": [],
+    "price": 340,
+    "is_discount": false,
+    "discount_rate": 0,
+    "discount_type": null
+  }
+]

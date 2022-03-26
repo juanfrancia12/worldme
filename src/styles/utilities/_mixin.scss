@@ -1,0 +1,101 @@
+// @mixin flex($justify-content: center, $gap: 1rem) {
+//   display: flex;
+//   align-items: center;
+//   justify-content: $justify-content;
+//   gap: $gap;
+// }
+
+// @mixin grid-simple {
+//   display: grid;
+//   place-items: center;
+// }
+
+// @mixin grid-layout(
+//   $grid-column: repeat(auto-fill, minmax(clamp(10rem, 50%, 18rem), 1fr)),
+//   $gap
+// ) {
+//   display: grid;
+//   grid-template-columns: $grid-column;
+//   gap: $gap;
+// }
+
+// @mixin fieldset-vertical($width, $height) {
+//   position: absolute;
+//   width: $width;
+//   height: $height;
+//   border: 2px solid gray;
+//   transform: rotate(-90deg);
+
+//   legend {
+//     padding: 0 10px;
+//   }
+// }
+
+
+// TODO: MIXIN
+
+@mixin display-flex($justify-content: center, $gap: 1rem) {
+  display: flex;
+  align-items: center;
+  justify-content: $justify-content;
+  gap: $gap;
+}
+
+@mixin display-grid($gap: 1rem) {
+  display: grid;
+  place-items: center;
+  gap: $gap;
+}
+
+@mixin grid-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); //14rem
+  gap: 2rem;
+  grid-auto-flow: dense;
+  // direction: rtl;
+  direction: ltr;
+}
+
+@mixin responsive {
+  @media screen and (min-width: map-get($breakpoint, "tablet")) {
+    padding: map-get($global, "padding__tablet");
+  }
+
+  @media screen and (min-width: map-get($breakpoint, "desktop")) {
+    padding: map-get($global, "padding__desktop");
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: map-get($breakpoint, "tablet")) {
+    @content;
+  }
+}
+
+@mixin semi-tablet {
+  @media screen and (max-width: map-get($breakpoint, "last_mobile")) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: map-get($breakpoint, "desktop")) {
+    @content;;
+  }
+}
+
+@mixin less_mobile {
+  @media screen and (max-width: map-get($breakpoint, "less_mobile")) {
+    @content;;
+  }
+}
+
+/*
+  border-right: 1px solid rgba(0,0,0,.08); -- border
+
+  background: rgb(241 243 244); -- color gray 200
+
+  background-color: #e8eaed; -- color gray 400
+
+  color: #5f6368;  -- color gray 700
+*/

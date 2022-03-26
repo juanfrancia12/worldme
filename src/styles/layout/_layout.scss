@@ -1,0 +1,116 @@
+// map-get($light, "background"); -- example
+
+.title {
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 140%;
+  // text-shadow: 1px 1px 3px rgb(225 225 225);
+
+  &__additional{
+    font-size: 1.3rem;
+  }
+
+  @include less_mobile{
+    font-size: 1rem;
+  }
+}
+
+.description {
+  &__gray {
+    color: gray;
+  }
+  &__red {
+    color: #EE0F0F; //red
+    font-weight: bold;
+  }
+  &__bold {
+    font-weight: bold;
+  }
+  &__line {
+    &--through {
+      text-decoration-line: line-through;
+    }
+  }
+}
+
+.subtitle {
+  // text-shadow: 1px 1px 3px rgb(225 225 225);
+}
+
+.icon {
+  height: 1rem;
+
+  &__menu {
+    padding-right: 0.3rem;
+  }
+
+  &__additional{
+    height: 2.5rem;
+  }
+}
+
+.button {
+  padding: 0.6rem 1.3rem;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  @include less_mobile{
+    padding: 0.5rem 0.8rem;
+    font-size: 0.8rem;
+  }
+
+  &__primary {
+    background-color: map-get($light, "background__hover");
+  }
+  &__secondary {
+    background-color: red;
+    color: #fff;
+  }
+  &__ghost {
+    background-color: white;
+    outline: 1px solid gray;
+  }
+}
+
+// .icon{
+//   height: 3rem;
+// }
+
+.section {
+  display: grid;
+  gap: 2rem;
+  padding: map-get($global, "padding__mobile");
+
+  &:first-child {
+    margin: 2rem 0 7rem 0;
+  }
+
+  &:nth-child(n + 2) {
+    margin: 0rem 0 7rem 0;
+  }
+
+  @include less_mobile{
+    gap: 1rem; 
+    &:first-child {
+      margin: 0rem 0 2rem 0;
+    }
+  
+    &:nth-child(n + 2) {
+      margin: 0rem 0 2rem 0;
+    }
+  }
+
+
+  @include tablet {
+    padding: map-get($global, "padding__tablet");
+  }
+
+  @include desktop {
+    padding: map-get($global, "padding__desktop");
+  }
+
+  &__heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
