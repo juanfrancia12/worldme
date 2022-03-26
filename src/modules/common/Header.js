@@ -81,7 +81,7 @@ export const Header = () => {
         <nav>
           <ul className={`nav ${toggleNav && "nav__toggle"}`}>
             <Link
-              to={"/"}
+              to={"/worldme"}
               className="logo__title nav__item--logo"
               onClick={menuToggle}
             >
@@ -95,7 +95,7 @@ export const Header = () => {
               return (
                 <NavLink
                   key={id}
-                  to={`${link}`}
+                  to={`/worldme/${link}`}
                   style={({ isActive }) => ({
                     color: isActive ? "red" : "black",
                   })}

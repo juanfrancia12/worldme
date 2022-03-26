@@ -21,13 +21,13 @@ function App() {
       <Layout>
         <Suspense fallback={<Spinner />}>
           <Routes>
-            <Route exact path="/" element={<PageHome />} />
-            <Route exact path="/basics" element={<PageBasics />} />
-            <Route exact path="/boys" element={<PageBoys />} />
-            <Route exact path="/man" element={<PageMan />} />
-            <Route exact path="/promotions" element={<PagePromotions />} />
-            <Route exact path="/sports" element={<PageSports />} />
-            <Route exact path="/women" element={<PageWomen />} />
+            <Route exact path="/worldme" element={<PageHome />} />
+            <Route exact path="/worldme/basics" element={<PageBasics />} />
+            <Route exact path="/worldme/boys" element={<PageBoys />} />
+            <Route exact path="/worldme/man" element={<PageMan />} />
+            <Route exact path="/worldme/promotions" element={<PagePromotions />} />
+            <Route exact path="/worldme/sports" element={<PageSports />} />
+            <Route exact path="/worldme/women" element={<PageWomen />} />
             <Route path="*" element={<PageNotFound />}></Route>
           </Routes>
         </Suspense>
