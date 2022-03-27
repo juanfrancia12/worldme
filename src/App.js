@@ -1,5 +1,5 @@
 import { Suspense, lazy } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 
 import { Layout } from "modules/common/Layout";
 import Spinner from "common/components/atoms/spinner";
@@ -25,9 +25,18 @@ function App() {
             <Route exact path="/worldme/basics" element={<PageBasics />} />
             <Route exact path="/worldme/boys" element={<PageBoys />} />
             <Route exact path="/worldme/man" element={<PageMan />} />
-            <Route exact path="/worldme/promotions" element={<PagePromotions />} />
+            <Route
+              exact
+              path="/worldme/promotions"
+              element={<PagePromotions />}
+            />
             <Route exact path="/worldme/sports" element={<PageSports />} />
             <Route exact path="/worldme/women" element={<PageWomen />} />
+            <Route
+              exact
+              path="/"
+              element={<Navigate to="/worldme" replace />}
+            />
             <Route path="*" element={<PageNotFound />}></Route>
           </Routes>
         </Suspense>
