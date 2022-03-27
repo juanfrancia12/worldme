@@ -1,6 +1,6 @@
 import React from "react";
 import { Header } from "./Header";
-import { Footer } from "./Footer";
+// import { Footer } from "./Footer";
 
 export const Layout = ({ children }) => {
   return (
@@ -8,7 +8,7 @@ export const Layout = ({ children }) => {
       <main>
         <Header />
         {children}
-        <Footer />
+        {/* <Footer /> */}
       </main>
     </>
   );
