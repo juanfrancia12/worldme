@@ -26,6 +26,8 @@ import new1 from "common/assets/image/home/news/1.jpg";
 import new2 from "common/assets/image/home/news/2.jpg";
 import new3 from "common/assets/image/home/news/3.jpg";
 
+import subscribe from "common/assets/image/home/news/1.jpg";
+
 export const Data = {
   recommended: [
     {
@@ -268,4 +270,7 @@ export const Data = {
       title: "Recoge tus compras gratis en tienda",
     },
   ],
+  subscribe: {
+    image: subscribe,
+  },
 };

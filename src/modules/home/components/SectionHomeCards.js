@@ -7,7 +7,7 @@ const SectionHomeCards = ({ data, islargeleft, dataSlice, isleft }) => {
   const endData = isleft ? 3 : 5;
 
   return (
-    <section className="section">
+    <section className="padding__section section">
       <div
         className={`grid__layout ${
           islargeleft ? "grid__layout--left" : "grid__layout--right"
@@ -64,7 +64,7 @@ const SectionHomeCards = ({ data, islargeleft, dataSlice, isleft }) => {
                       />
                     </div>
                     <div className="card__footer card__footer--product card__footer--justify">
-                      <h2 className="title">{name + " - " + id}</h2>
+                      <h2 className="title">{name}</h2>
                       <h3 className="subtitle">{description}</h3>
                       <div className="card__price--old">
                         <h3 className="description">Antes</h3>

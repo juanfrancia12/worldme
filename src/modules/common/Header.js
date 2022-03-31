@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link, NavLink } from "react-router-dom";
 
 import { FaUserAlt, FaShoppingCart, FaSearch } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
+// import { ActionMessage } from "modules/common/ActionMessage";
+
+import { useStateActive } from "common/hooks/useStateActive";
 
 const NAME_WEB = "WorldMe";
 
@@ -59,35 +62,35 @@ const OptionsHeader = [
 ];
 
 export const Header = () => {
-  const [toggleNav, setToggleNav] = useState(false);
+  const toggleHeader = useStateActive();
+  const { isActive, onMenuToggle } = toggleHeader;
+
+  const OnActiveFeedback = (e) => {
+    console.log(e);
+  };
 
   // let nameURL = window.location.pathname;
   // console.log("id", nameURL.replace(/\//g, ""))
 
-  const menuToggle = () => {
-    setToggleNav(!toggleNav);
-  };
-
   return (
     <>
-      <div className="section__background--dark"></div>
-      <header className="header">
+      <header className="padding__section header">
         <div className="logo">
-          <GiHamburgerMenu className="icon icon__menu" onClick={menuToggle} />
           <Link to={"/"} className="logo__title">
             <h1>{NAME_WEB}</h1>
           </Link>
+          <GiHamburgerMenu className="icon icon__menu" onClick={onMenuToggle} />
         </div>
         <nav>
-          <ul className={`nav ${toggleNav && "nav__toggle"}`}>
+          <ul className={`nav ${isActive && "nav__toggle"}`}>
             <Link
               to={"/worldme"}
               className="logo__title nav__item--logo"
-              onClick={menuToggle}
+              onClick={onMenuToggle}
             >
               <h1>{NAME_WEB}</h1>
             </Link>
-            <div className="nav__item--close" onClick={menuToggle}>
+            <div className="nav__item--close" onClick={onMenuToggle}>
               <AiOutlineClose className="icon" />
             </div>
             {LinksHeader.map((item) => {
@@ -103,7 +106,7 @@ export const Header = () => {
                     `nav__item ${isActive && "nav__item--select"}`
                   }
                 >
-                  <li onClick={menuToggle}>{name}</li>
+                  <li onClick={onMenuToggle}>{name}</li>
                 </NavLink>
               );
             })}
@@ -120,6 +123,13 @@ export const Header = () => {
             );
           })}
         </div>
+
+        {/* <ActionMessage
+          isActiveFeedback={true}
+          title="Message"
+          message="Esta es la descripcion"
+          OnActiveFeedback={OnActiveFeedback}
+        /> */}
       </header>
     </>
   );

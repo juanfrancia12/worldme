@@ -1,0 +1,26 @@
+.subscribe {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  &__form {
+    width: 100%;
+    display: grid;
+    gap: 2rem;
+  }
+  &__politic {
+    display: flex;
+    gap: 0.5rem;
+    cursor: pointer;
+    margin-top: 0.5rem;
+
+    span {
+      display: flex;
+    }
+  }
+
+  button{
+    margin-top: 0.5rem;
+  }
+}

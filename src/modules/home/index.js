@@ -5,7 +5,8 @@ import { Data } from "common/data/home/index.js";
 import SectionHeading from "./components/SectionHeading";
 import SectionRecommended from "./components/SectionRecommended";
 import SectionHomeCards from "./components/SectionHomeCards";
-import SectionAdditional from './components/SectionAdditional';
+import SectionAdditional from "./components/SectionAdditional";
+import SectionSubscribe from './components/SectionSubscribe';
 
 const Home = () => {
   const [dataSlice, setDataSlice] = useState(5);
@@ -27,7 +28,7 @@ const Home = () => {
 
   return (
     <>
-      <section className="section">
+      <section className="padding__section section">
         <SectionHeading title="Recomendado para ti" />
         <SectionRecommended data={Data.recommended} />
       </section>
@@ -60,12 +61,14 @@ const Home = () => {
         isleft={false}
       />
 
-      <section className="section">
+      <section className="padding__section section">
         <SectionHeading title="Nuevos Lanzamientos" />
         <SectionRecommended data={Data.news} shortHeight={true} />
       </section>
-      
-        <SectionAdditional data={Data.additional} />
+
+      <SectionAdditional data={Data.additional} />
+
+      <SectionSubscribe/>
     </>
   );
 };

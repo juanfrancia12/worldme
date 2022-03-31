@@ -2,6 +2,19 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  scroll-behavior: smooth;
+  // scroll-padding: 75px;
+
+  &::selection {
+    background-color: #000;
+    color: #fff;
+  }
+
+  // &::focus {
+  //   outline-color: transparent;
+  //   outline-style: none;
+  // }
 }
 
 html,
@@ -131,6 +144,14 @@ em {
   color: inherit;
 }
 
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
 form,
 input,
 textarea,
@@ -146,7 +167,13 @@ label {
   appearance: none;
 }
 
-/* Evitamos problemas con los SVG */
+table,
+tr,
+td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
 svg {
   width: 100%;
   display: block;
@@ -164,9 +191,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   display: grid;
-}
-
-main {
   width: 100%;
   min-height: 100vh;
   color: #2d3436;
@@ -180,4 +204,25 @@ img {
   display: block;
   width: 100%;
   height: 100%;
+}
+strong {
+  font-weight: bold;
+}
+
+input{
+  outline: none;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgb(168, 168, 168);
+  border-radius: 5px;
+
+  &:focus{
+    border: 1px solid rgb(129, 129, 129);
+  }
+
+  &[type="checkbox"] {
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 1px solid rgb(168, 168, 168);
+    appearance: auto;
+  }
 }

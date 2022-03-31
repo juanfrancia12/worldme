@@ -3,11 +3,19 @@
   font-size: 1.5rem;
   line-height: 140%;
 
-  &__additional{
+  &__additional {
     font-size: 1.3rem;
   }
 
-  @include less_mobile{
+  &__subscribe {
+    font-size: 2rem;
+
+    @include tablet {
+      font-size: 2.3rem;
+    }
+  }
+
+  @include less_mobile {
     font-size: 1rem;
   }
 }
@@ -17,7 +25,7 @@
     color: gray;
   }
   &__red {
-    color: #EE0F0F; //red
+    color: #ee0f0f; //red
     font-weight: bold;
   }
   &__bold {
@@ -33,15 +41,72 @@
 .subtitle {
 }
 
-.icon {
-  height: 1rem;
+.input {
+  // border: 1px solid rgb(158, 156, 156);
+  // height: 3rem;
+  // border-radius: 5px;
+}
 
-  &__menu {
-    padding-right: 0.3rem;
+.icon {
+  cursor: pointer;
+  height: 1rem;
+  box-sizing: border-box;
+
+  &__contact {
+    background-color: rgba(128, 128, 128, 0.6);
+    padding: 0.8rem;
+    height: 3rem;
+    border-radius: 50%;
   }
 
-  &__additional{
+  &__close {
+    &--feedback {
+      width: auto;
+    }
+  }
+
+  &__menu {
+    // padding-right: 0.3rem;
+    width: auto;
+    height: 100%;
+    font-size: x-large;
+    padding: 0.5rem;
+
+    &:hover {
+      background: map-get($light, "background__hover");
+    }
+  }
+
+  &__additional {
     height: 2.5rem;
+  }
+
+  &__scroll {
+    &--top {
+      position: fixed;
+      bottom: 7rem;
+      right: 1rem;
+      background-color: #d4d4d4;
+      color: #32393e;
+      width: 3rem;
+      height: 3rem;
+      display: grid;
+      place-content: center;
+      border-radius: 50%;
+      display: none;
+
+      @include tablet {
+        right: 2.5rem;
+        bottom: 2.5rem;
+      }
+
+      @include desktop {
+        right: 4rem;
+      }
+    }
+    &--visible {
+      display: block;
+    }
   }
 }
 
@@ -49,7 +114,8 @@
   padding: 0.6rem 1.3rem;
   border-radius: 0.2rem;
   cursor: pointer;
-  @include less_mobile{
+
+  @include less_mobile {
     padding: 0.5rem 0.8rem;
     font-size: 0.8rem;
   }
@@ -67,10 +133,23 @@
   }
 }
 
+.padding {
+  &__section {
+    padding: map-get($global, "padding__mobile");
+
+    @include tablet {
+      padding: map-get($global, "padding__tablet");
+    }
+
+    @include desktop {
+      padding: map-get($global, "padding__desktop");
+    }
+  }
+}
+
 .section {
   display: grid;
   gap: 2rem;
-  padding: map-get($global, "padding__mobile");
 
   &:first-child {
     margin: 2rem 0 7rem 0;
@@ -80,29 +159,30 @@
     margin: 0rem 0 7rem 0;
   }
 
-  @include less_mobile{
-    gap: 1rem; 
+  @include less_mobile {
+    gap: 1rem;
     &:first-child {
       margin: 0rem 0 2rem 0;
     }
-  
+
     &:nth-child(n + 2) {
       margin: 0rem 0 2rem 0;
     }
-  }
-
-
-  @include tablet {
-    padding: map-get($global, "padding__tablet");
-  }
-
-  @include desktop {
-    padding: map-get($global, "padding__desktop");
   }
 
   &__heading {
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+}
+
+.line {
+  &__separator {
+    border-top: 0.1rem solid #313940;
+    height: auto;
+    width: 50%;
+    padding: 0;
+    margin: 1.5rem 0;
   }
 }

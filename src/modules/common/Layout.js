@@ -1,15 +1,14 @@
 import React from "react";
 import { Header } from "./Header";
-// import { Footer } from "./Footer";
+import { Footer } from "./Footer";
 
 export const Layout = ({ children }) => {
   return (
     <>
-      <main>
-        <Header />
-        {children}
-        {/* <Footer /> */}
-      </main>
+      <div id="header" className="section__background--dark"></div>
+      <Header />
+      <main>{children}</main>
+      <Footer />
     </>
   );
 };

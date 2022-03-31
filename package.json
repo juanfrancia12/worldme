@@ -1,5 +1,6 @@
 {
   "name": "worldme",
+  "homepage": "https://juanfrancia12.github.io/worldme",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -15,6 +16,7 @@
     "react-simple-chatbot": "^0.6.1",
     "react-use-cart": "^1.13.0",
     "sass": "^1.49.9",
+    "sweetalert": "^2.1.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

@@ -3,33 +3,30 @@
   position: sticky;
   top: 0;
   min-height: map-get($global, "min__height--header");
-  padding: map-get($global, "padding__mobile");
   background-color: map-get($light, "background");
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   z-index: 1;
 
-  @include less_mobile{
+  @include less_mobile {
     .logo {
+      font-size: 1.2rem;
       &__title {
         letter-spacing: 0.05rem;
-        font-size: 1.1rem;
       }
     }
-    .options {
-      @include display-flex(flex-end, 0.7rem);
-      &__item {
-        padding: map-get($global, "min__height--header") 0;
-        gap: 0.3rem;
-      }
-    }
+    // .options {
+    //   @include display-flex(flex-end, 0.7rem);
+    //   &__item {
+    //     padding: map-get($global, "min__height--header") 0;
+    //     gap: 0.3rem;
+    //   }
+    // }
   }
 
   @include display-flex(space-between, 0);
   margin-bottom: 2rem;
 
   @include tablet {
-    padding: map-get($global, "padding__tablet");
-
     .icon {
       &__menu {
         display: none;
@@ -55,29 +52,25 @@
   }
 
   @include desktop {
-    padding: map-get($global, "padding__desktop");
-
     .nav {
       @include display-flex(center, 4.5rem);
       font-size: 1.1rem;
     }
   }
 }
-.icon {
-  cursor: pointer;
-  height: 1.3rem;
-
-  &__menu {
-    padding-right: 1rem;
-
-    &:hover {
-      background: map-get($light, "background__hover");
-    }
-  }
-}
 .logo {
-  @include display-flex(flex-start, 0rem);
+  // @include display-flex(flex-start, 0rem);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   text-transform: capitalize;
+  gap: 0.3rem;
+
+  @include tablet {
+    width: auto;
+    justify-content: flex-start;
+  }
 
   &__title {
     padding: 0.2rem 0;
@@ -175,16 +168,34 @@
   }
 }
 .options {
-  @include display-flex(flex-end, 0);
+  // @include display-flex(flex-end, 0);
+  // background-color: red;
+  background-color: map-get($light, "background");
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
+  place-items: center;
+
+  @include tablet {
+    position: inherit;
+    width: auto;
+    @include display-flex(flex-end, 0);
+  }
 
   &__item {
     cursor: pointer;
-    padding: map-get($global, "min__height--header") 1rem;
+    // padding: map-get($global, "min__height--header") 1rem;
     display: grid;
+    place-content: center;
     gap: 0.3rem;
     flex-direction: column;
     grid-auto-columns: max-content;
     font-size: 0.9rem;
+    width: 100%;
+    padding: map-get($global, "min__height--header") / 4 1rem;
 
     &:hover {
       background: map-get($light, "background__hover");
@@ -197,6 +208,8 @@
       width: 100%;
       height: 40px;
       background: map-get($dark, "background");
+      color: #8e9193;
+      text-align: center;
     }
   }
 }

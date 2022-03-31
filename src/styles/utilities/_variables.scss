@@ -11,7 +11,7 @@ $breakpoint: (
 );
 
 $global: (
-  "min__height--header": 1rem,
+  "min__height--header": 4rem, // 1rem
   "padding__mobile": 0 1rem,
   "padding__tablet": 0 2.5rem,
   "padding__desktop": 0 4rem,
@@ -24,6 +24,7 @@ $global: (
 $light: (
   "background": rgb(241, 241, 241),
   "background__hover": rgb(228, 228, 228),
+  "color": #1e272e,
   "color__border": #c9c7c7,
   "box__shadow": (
     0 10px 15px -3px rgb(0 0 0 / 10%),
@@ -37,6 +38,7 @@ $light: (
 $dark: (
   "background": #1e272e,
   "background__hover": null,
+  "color": rgb(241, 241, 241),
   "color__border": null,
   "box__shadow": 0 0 1rem rgba(0, 0, 0, 0.5),
   "button__primary": null,

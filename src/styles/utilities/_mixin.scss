@@ -47,13 +47,13 @@
   gap: $gap;
 }
 
-@mixin grid-layout {
+@mixin grid-layout($min: 14rem) {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); //14rem
+  grid-template-columns: repeat(auto-fit, minmax($min, 1fr)); //14rem
   gap: 2rem;
   grid-auto-flow: dense;
   // direction: rtl;
-  direction: ltr;
+  // direction: ltr;
 }
 
 @mixin responsive {
@@ -68,6 +68,12 @@
 
 @mixin tablet {
   @media screen and (min-width: map-get($breakpoint, "tablet")) {
+    @content;
+  }
+}
+
+@mixin min-tablet {
+  @media screen and (max-width: map-get($breakpoint, "tablet")) {
     @content;
   }
 }

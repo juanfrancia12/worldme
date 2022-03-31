@@ -1,0 +1,45 @@
+.footer {
+  background-color: #1E272E;
+  padding: map-get($global, "padding__mobile");
+  color: map-get($light, "background__hover");
+
+  @include tablet {
+    padding: map-get($global, "padding__tablet");
+  }
+
+  @include min-tablet {
+    padding-bottom: 5rem;
+  }
+
+  @include desktop {
+    padding: map-get($global, "padding__desktop");
+    // background-color: rgb(102, 101, 101);
+  }
+  &__container {
+    padding: 2rem 0;
+  }
+  &__contact{
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 3rem);
+    gap: 1rem;
+  }
+  &__item {
+    padding: 1rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  &__nav{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+
+    li:hover{
+      text-decoration: underline;
+    }
+  }
+}

@@ -2,7 +2,7 @@ import React from 'react'
 
 const SectionAdditional = ({data}) => {
   return (
-    <section className="section section__additional">
+    <section className="padding__section section section__additional">
       <div className="grid__layout">
         {data.map((item) => {
           const {id, image, title} = item;
