@@ -5,7 +5,7 @@
   min-height: map-get($global, "min__height--header");
   background-color: map-get($light, "background");
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  // z-index: 1;
+  z-index: 1;
 
   @include less_mobile {
     .logo {
@@ -14,13 +14,6 @@
         letter-spacing: 0.05rem;
       }
     }
-    // .options {
-    //   @include display-flex(flex-end, 0.7rem);
-    //   &__item {
-    //     padding: map-get($global, "min__height--header") 0;
-    //     gap: 0.3rem;
-    //   }
-    // }
   }
 
   @include display-flex(space-between, 0);
@@ -58,7 +51,6 @@
   }
 }
 .logo {
-  // @include display-flex(flex-start, 0rem);
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -167,8 +159,6 @@
   }
 }
 .options {
-  // @include display-flex(flex-end, 0);
-  // background-color: red;
   background-color: map-get($light, "background");
   position: fixed;
   bottom: 0;
@@ -188,7 +178,6 @@
 
   &__item {
     cursor: pointer;
-    // padding: map-get($global, "min__height--header") 1rem;
     display: grid;
     place-content: center;
     gap: 0.3rem;

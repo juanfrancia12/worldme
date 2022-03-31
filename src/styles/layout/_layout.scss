@@ -2,10 +2,9 @@
   font-weight: bold;
   font-size: 1.4rem;
   line-height: 120%;
-  // width: 90%;
   margin: 0 auto;
 
-  &__section{
+  &__section {
     margin: auto 0;
   }
 
@@ -20,10 +19,6 @@
       font-size: 2.3rem;
     }
   }
-
-  // @include less_mobile {
-  //   font-size: 1.4rem;
-  // }
 }
 
 .description {
@@ -48,9 +43,6 @@
 }
 
 .input {
-  // border: 1px solid rgb(158, 156, 156);
-  // height: 3rem;
-  // border-radius: 5px;
 }
 
 .icon {
@@ -72,7 +64,6 @@
   }
 
   &__menu {
-    // padding-right: 0.3rem;
     width: auto;
     height: 100%;
     font-size: x-large;
@@ -126,6 +117,10 @@
     font-size: 0.8rem;
   }
 
+  &__form {
+    padding: 0.7rem 1.3rem;
+  }
+
   &__primary {
     background-color: map-get($light, "background__hover");
   }
@@ -157,27 +152,8 @@
   display: grid;
   gap: 2rem;
 
-  // &:first-child {
-  //   margin: 2rem 0 7rem 0;
-  // }
-
-  // &:nth-child(n + 2) {
-  //   margin: 0rem 0 7rem 0;
-  // }
-
-  // @include less_mobile {
-  //   gap: 1rem;
-  //   &:first-child {
-  //     margin: 0rem 0 2rem 0;
-  //   }
-
-  //   &:nth-child(n + 2) {
-  //     margin: 0rem 0 2rem 0;
-  //   }
-  // }
-
-  &__grid{
-    &--gap{
+  &__grid {
+    &--gap {
       display: grid;
       gap: 3rem;
     }
@@ -200,7 +176,7 @@
   }
 }
 
-.position{
+.position {
   &__left {
     display: grid;
     place-content: center;
@@ -208,14 +184,14 @@
   }
 }
 
-.text{
-  &__transform{
-    &--uppercase{
+.text {
+  &__transform {
+    &--uppercase {
       text-transform: uppercase;
     }
   }
 }
 
-.image{
+.image {
   border-radius: 0.3rem;
 }
