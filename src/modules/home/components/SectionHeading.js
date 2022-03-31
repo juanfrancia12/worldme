@@ -2,8 +2,8 @@ import React from "react";
 
 const SectionHeading = ({title}) => {
   return (
-    <div className="padding__section section__heading">
-      <div className="title">{title}</div>
+    <div className="section__heading">
+      <div className="title title__section">{title}</div>
       <button className="button button__primary">Ver todo</button>
     </div>
   );

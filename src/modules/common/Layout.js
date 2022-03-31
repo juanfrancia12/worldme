@@ -6,9 +6,11 @@ export const Layout = ({ children }) => {
   return (
     <>
       <div id="header" className="section__background--dark"></div>
-      <Header />
-      <main>{children}</main>
-      <Footer />
+      <section className="section__grid--gap">
+        <Header />
+        <main>{children}</main>
+        <Footer />
+      </section>
     </>
   );
 };

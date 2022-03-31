@@ -1,44 +1,38 @@
 .footer {
-  background-color: #1E272E;
-  padding: map-get($global, "padding__mobile");
+  background-color: #1e272e;
   color: map-get($light, "background__hover");
-
-  @include tablet {
-    padding: map-get($global, "padding__tablet");
-  }
-
   @include min-tablet {
     padding-bottom: 5rem;
-  }
-
-  @include desktop {
-    padding: map-get($global, "padding__desktop");
-    // background-color: rgb(102, 101, 101);
   }
   &__container {
     padding: 2rem 0;
   }
-  &__contact{
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
-    // flex-wrap: wrap;
+  &__contact {
     display: grid;
     grid-template-columns: repeat(auto-fit, 3rem);
     gap: 1rem;
+    place-content: center;
   }
   &__item {
-    padding: 1rem 1.5rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    padding: 1rem 2rem;
+
+    // &:nth-child(n) {
+    //   border-right: 1px solid red;
+    // }
+
+    // &:last-child{
+    //   border-right: none;
+    // }
   }
-  &__nav{
+  &__nav {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem 1rem;
 
-    li:hover{
+    li:hover {
       text-decoration: underline;
     }
   }

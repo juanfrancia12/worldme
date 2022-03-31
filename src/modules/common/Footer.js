@@ -11,12 +11,12 @@ import { AiFillInstagram } from "react-icons/ai";
 export const Footer = () => {
   return (
     <>
-      <footer className="footer">
+      <footer className="padding__section footer">
         <ButtonScrollTop />
         <div className="footer__container grid__layout">
           <div className="footer__item">
             <h3 className="title">WorldMe</h3>
-            <p className="description">
+            <p className="description position__left">
               Somos una empresa de venta de ropa para niños, hombre y mujeres;
               para toda ocasión.
             </p>
@@ -24,7 +24,7 @@ export const Footer = () => {
           <div className="footer__item">
             <h3 className="title">Enlaces</h3>
             <nav>
-              <ul className="footer__nav">
+              <ul className="footer__nav position__left">
                 <li>
                   <a href="#header">Inicio</a>
                 </li>
@@ -47,8 +47,8 @@ export const Footer = () => {
                   <Link to="worldme/promotions">Promociones</Link>
                 </li>
               </ul>
-              <div className="line__separator"></div>
-              <ul className="footer__nav">
+              <div className="line__separator position__left"></div>
+              <ul className="footer__nav position__left">
                 <li>
                   <Link to="">Acerca de nosotros</Link>
                 </li>
@@ -60,7 +60,7 @@ export const Footer = () => {
           </div>
           <div className="footer__item">
             <h3 className="title">Contáctanos</h3>
-            <div className="footer__contact">
+            <div className="footer__contact position__left">
               <Link to="https://www.instagram.com">
                 <AiFillInstagram className="icon icon__contact" />
               </Link>

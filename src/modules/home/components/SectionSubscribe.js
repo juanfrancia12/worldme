@@ -4,25 +4,44 @@ import { Link } from "react-router-dom";
 import swal from "sweetalert";
 
 import { Data } from "common/data/home/index.js";
+import { ActionMessage } from "modules/common/ActionMessage";
 
 const SectionSubscribe = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [acceptPolitic, setAcceptPolitic] = useState(false);
+  const [isActiveFeedback, setIsActiveFeedback] = useState(false);
+  const [isErrorFeedback, setIsErrorFeedback] = useState(false);
+
+  const onCloseFeedback = () => {
+    setIsActiveFeedback(false);
+  };
 
   const OnSubmitSubscribe = (e) => {
     e.preventDefault();
+    console.log("press submit");
 
-    const title = "Incorrect dates";
-    const content = "Check and try again";
-    const icon = "error";
-    swal(title, content, icon);
+    if (name === "" || email === "") {
+      setIsActiveFeedback(true);
+      setIsErrorFeedback(true);
+      console.log("error");
+      return;
+    }
+
+    setIsActiveFeedback(true);
+    setIsErrorFeedback(false);
+    console.log("success");
+
+    // const title = "Incorrect dates";
+    // const content = "Check and try again";
+    // const icon = "error";
+    // swal(title, content, icon);
   };
 
   return (
     <>
       <section className="padding__section section grid__layout--2 subscribe">
-        <img src={Data.subscribe.image} alt="" />
+        <img src={Data.subscribe.image} alt="" className="image" />
         <div className="subscribe__container">
           <p className="title title__subscribe">
             Suscríbete a nuestro boletín y recibe 10% de dscto. en tu primera
@@ -66,6 +85,18 @@ const SectionSubscribe = () => {
           </form>
         </div>
       </section>
+      {isActiveFeedback && (
+        <ActionMessage
+          isActive={isActiveFeedback}
+          title={isErrorFeedback ? "ERROR" : "SUCCESS"}
+          description={
+            isErrorFeedback
+              ? "Por favor, verifique los campos"
+              : "Gracias por suscribirte."
+          }
+          onVisibleInactive={onCloseFeedback}
+        />
+      )}
     </>
   );
 };

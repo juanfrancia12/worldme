@@ -10,7 +10,7 @@ const SectionRecommended = ({ data, shortHeight }) => {
             <img src={image} alt={title} className="card__item--image" />
             <div className={`card__item--information ${shortHeight && 'card__item--shortinformation'}`}>
               <h3 className="subtitle">{subtitle}</h3>
-              <h2 className="title">{title}</h2>
+              <h2 className="title text__transform--uppercase">{title}</h2>
             </div>
           </ul>
         );
