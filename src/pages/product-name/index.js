@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom";
 
 import { useProducts } from "common/hooks/useProducts";
 
@@ -11,12 +11,6 @@ const Index = () => {
   const navigate = useNavigate();
 
   const { products } = useProducts();
-
-  // const women = products.women.find(
-  //   (product) => product.name.toLowerCase().replace(" ", "_") === name
-  // );
-
-  // console.log("women find", women)
 
   useEffect(() => {
     setProductName(
@@ -32,7 +26,14 @@ const Index = () => {
   }
 
   if (!productName) {
-    return <div className="">No hay...</div>;
+    return (
+      <div className="">
+        Producto no encontrado.
+        <Link to={"/"} style={{ color: "blue" }}>
+          Volver al inicio
+        </Link>
+      </div>
+    );
   }
 
   return (

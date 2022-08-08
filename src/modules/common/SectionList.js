@@ -31,10 +31,7 @@ const calculatePercentage = (isPercentage, amount, count) => {
 };
 
 function SortArray(x, y, ver) {
-  console.log("ver: " + ver);
-  if (ver === "default") {
-    return;
-  } else if (ver === "z-a") {
+  if (ver === "z-a") {
     return y.name.localeCompare(x.name);
   } else if (ver === "a-z") {
     return x.name.localeCompare(y.name);
@@ -46,7 +43,7 @@ function SortArray(x, y, ver) {
 }
 
 const SectionList = ({ products, category }) => {
-  const [valueSelect, setValueSelect] = React.useState("Default");
+  const [valueSelect, setValueSelect] = React.useState("a-z");
   const [textSearch, setTextSearch] = React.useState("");
 
   const handleFoodChange = (event) => {
@@ -57,40 +54,37 @@ const SectionList = ({ products, category }) => {
     setTextSearch(e.target.value);
   };
 
-  const dataProduct = products.slice()
-  .filter(
-    (item) =>
-      item.islarge !== true
-  )
-  .map((item) => {
-    const { discount, price_old } = item;
-    return {
-      ...item,
-      price_new: calculatePercentage(
-        discount?.type === "percentage" ? true : false,
-        price_old,
-        discount?.amount
-      ),
-    };
-  });
+  const dataProduct = products
+    .slice()
+    .filter((item) => item.islarge !== true)
+    .map((item) => {
+      const { discount, price_old } = item;
+      return {
+        ...item,
+        price_new: calculatePercentage(
+          discount?.type === "percentage" ? true : false,
+          price_old,
+          discount?.amount
+        ),
+      };
+    });
 
   return (
     <div className="section__content">
       <div className="section__content--heading">
-        <div className="section__list--count subtitle">{`Total de productos: ${dataProduct?.length}`}</div>
+        <div className="section__list--count subtitle">Todos los productos</div>
         <div className="section__list--options">
           <input
             type="search"
-            placeholder="Search..."
+            placeholder="Buscar..."
             onChange={(e) => handleSearch(e)}
           />
           <Dropdown
             options={[
-              { id: 1, label: "Default", value: "default" },
-              { id: 2, label: "A - Z", value: "a-z" },
-              { id: 3, label: "Z - A", value: "z-a" },
-              { id: 4, label: "Precio ascendente", value: "price-ascending" },
-              { id: 5, label: "Precio descendente", value: "price-descending" },
+              { id: 1, label: "A - Z", value: "a-z" },
+              { id: 2, label: "Z - A", value: "z-a" },
+              { id: 3, label: "Precio ascendente", value: "price-ascending" },
+              { id: 4, label: "Precio descendente", value: "price-descending" },
             ]}
             value={valueSelect}
             onChange={handleFoodChange}
@@ -101,9 +95,8 @@ const SectionList = ({ products, category }) => {
       <div className="section__content--list">
         <div className="grid__layout--product">
           {dataProduct
-            .filter(
-              (item) =>
-                item.name.toLowerCase().includes(textSearch.toLowerCase())
+            .filter((item) =>
+              item.name.toLowerCase().includes(textSearch.toLowerCase())
             )
             .sort((x, y) => SortArray(x, y, valueSelect))
             .map((item) => {
@@ -151,11 +144,6 @@ const SectionList = ({ products, category }) => {
                       <h3 className="description description__bold">Online</h3>
                       <h3 className="description description__red">
                         {`S/. ${price_new}`}
-                        {/* {`S/. ${calculatePercentage(
-                          discount.type === "percentage" ? true : false,
-                          price_old,
-                          discount.amount
-                        )}`} */}
                       </h3>
                     </div>
                   </div>

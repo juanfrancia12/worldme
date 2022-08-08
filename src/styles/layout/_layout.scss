@@ -6,6 +6,28 @@
 
   &__section {
     margin: 0 auto;
+
+    &--banner {
+      text-align: center;
+      font-size: 2rem;
+      color: #575754;
+      margin: 3rem 0 2rem 0;
+      position: relative;
+      text-transform: uppercase;
+
+      &:after {
+        transform: translateX(-50%);
+        content: "";
+        // background: #1890ff;
+        background: linear-gradient(to left, #2d3436, rgb(255, 255, 255));
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        height: 3px;
+        width: 60px;
+        border-radius: 50% 5px 5px 50%;
+      }
+    }
   }
 
   &__additional {
@@ -40,7 +62,7 @@
 }
 
 .subtitle {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .input {
@@ -51,8 +73,7 @@
   height: 1rem;
   box-sizing: border-box;
 
-  &__cart{
-    
+  &__cart {
   }
 
   &__contact {
@@ -129,6 +150,7 @@
 
   &__primary {
     background-color: map-get($light, "background__hover");
+    outline: 1px solid map-get($light, "color__border");
   }
   &__secondary {
     background-color: red;
@@ -180,7 +202,7 @@
     padding: 0;
     margin: 1.5rem auto;
 
-    &--secondary{
+    &--secondary {
       width: 100%;
       border-top: 0.1rem solid #d3d3d3;
     }
@@ -213,8 +235,8 @@
   border-radius: 0.3rem;
 }
 
-.text{
-  &__ellipsis{
+.text {
+  &__ellipsis {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;

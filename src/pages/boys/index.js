@@ -1,5 +1,5 @@
 import React from "react";
-import Boys from "../../modules/boys/interface";
+import Boys from "../../modules/boys";
 
 const index = () => {
   return <Boys />;

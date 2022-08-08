@@ -23,29 +23,3 @@ export const ActionMessage = ({
     </div>
   );
 };
-
-// export const ActionMessage = ({
-//   isActiveFeedback,
-//   title,
-//   message,
-//   onVisibleInactive,
-//   onCloseInactive,
-//   OnActiveFeedback
-// }) => {
-//   return (
-//     <div
-//       className={`message__feedback ${isActiveFeedback &&
-//         "message__feedback--active"}`}
-//     >
-//       <div className="message__feedback--heading">
-//         <strong className="subtitle">{title}</strong>
-//         <AiOutlineClose
-//           className="icon icon__close--feedback"
-//           onClick={onVisibleInactive}
-//         />
-//       </div>
-
-//       <span className="description">{message}</span>
-//     </div>
-//   );
-// };

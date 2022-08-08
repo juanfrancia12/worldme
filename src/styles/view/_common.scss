@@ -3,7 +3,7 @@
     display: grid;
     // grid-template-columns: repeat(auto-fit, minmax(auto, 1fr));
 
-      grid-template-areas:
+    grid-template-areas:
       "filters filters filters"
       "content content content"
       "content content content";
@@ -13,14 +13,14 @@
         "filters filters filters"
         "content content content"
         "content content content";
-      }
-      @include desktop {
-        grid-template-areas:
+    }
+    @include desktop {
+      grid-template-areas:
         "filters content content content content"
         "filters content content content content"
         "filters content content content content";
-        grid-template-columns: 2fr 6fr;
-      }
+      grid-template-columns: 2fr 6fr;
+    }
   }
 }
 
@@ -54,7 +54,7 @@
     }
   }
   &__list {
-    &--count{
+    &--count {
       width: 100%;
     }
     &--options {
@@ -86,7 +86,8 @@
     display: inline-block;
     width: 100%;
     cursor: pointer;
-    padding: 0.5rem 1rem;
+    // padding: 0.5rem 1rem;
+    padding: 0.5rem 2.5rem 0.5rem 1rem;
     background: #ffff;
     color: #999;
     border: 2px solid rgba(0, 0, 0, 0.2);
@@ -101,7 +102,7 @@
 
   i {
     position: absolute;
-    right: 20px;
+    right: 1rem;
     top: calc(50% - 0.25rem);
     width: 0.8rem;
     height: 0.5rem;

@@ -68,11 +68,11 @@ const Index = () => {
   const { products } = useProducts();
   return (
     <section className="padding__section section">
-      <SectionBanner products={products} category="women" />
+      <SectionBanner products={products} category="boys" />
 
       <section className="grid__secondary">
         <SectionFilters accordionItems={accordionItems} />
-        <SectionList products={products.women} category="women" />
+        <SectionList products={products.boys} category="boys" />
       </section>
     </section>
   );

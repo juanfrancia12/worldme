@@ -6,11 +6,9 @@ import Spinner from "common/components/atoms/spinner";
 
 import "styles/main.scss";
 
-const PageBasics = lazy(() => import("pages/basics"));
 const PageBoys = lazy(() => import("pages/boys"));
 const PageHome = lazy(() => import("pages/home"));
 const PageMen = lazy(() => import("pages/man"));
-const PagePromotions = lazy(() => import("pages/promotions"));
 const PageSports = lazy(() => import("pages/sports"));
 const PageWomen = lazy(() => import("pages/women"));
 const PageNotFound = lazy(() => import("pages/not_found"));
@@ -22,15 +20,13 @@ function App() {
       <Layout>
         <Suspense fallback={<Spinner />}>
           <Routes>
-            <Route exact path="/worldme/product/:category/:name" element={<ProductName />} />
-            <Route exact path="/worldme/basics" element={<PageBasics />} />
-            <Route exact path="/worldme/boys" element={<PageBoys />} />
-            <Route exact path="/worldme/men" element={<PageMen />} />
             <Route
               exact
-              path="/worldme/promotions"
-              element={<PagePromotions />}
+              path="/worldme/product/:category/:name"
+              element={<ProductName />}
             />
+            <Route exact path="/worldme/boys" element={<PageBoys />} />
+            <Route exact path="/worldme/men" element={<PageMen />} />
             <Route exact path="/worldme/sports" element={<PageSports />} />
             <Route exact path="/worldme/women" element={<PageWomen />} />
             <Route exact path="/worldme/" element={<PageHome />} />

@@ -2,10 +2,7 @@ import React from "react";
 import ButtonScrollTop from "./ScrollTop";
 import { Link } from "react-router-dom";
 
-import {
-  IoLogoWhatsapp,
-  IoLogoFacebook,
-} from "react-icons/io";
+import { IoLogoWhatsapp, IoLogoFacebook } from "react-icons/io";
 import { AiFillInstagram } from "react-icons/ai";
 
 export const Footer = () => {
@@ -26,7 +23,7 @@ export const Footer = () => {
             <nav>
               <ul className="footer__nav position__left">
                 <li>
-                  <a href="#header">Inicio</a>
+                  <Link to={"/"}>Inicio</Link>
                 </li>
                 <li>
                   <Link to="worldme/women">Mujer</Link>
@@ -38,13 +35,7 @@ export const Footer = () => {
                   <Link to="worldme/boys">Niños</Link>
                 </li>
                 <li>
-                  <Link to="worldme/basics">Básicos</Link>
-                </li>
-                <li>
                   <Link to="worldme/sports">Deportes</Link>
-                </li>
-                <li>
-                  <Link to="worldme/promotions">Promociones</Link>
                 </li>
               </ul>
               <div className="line__separator position__left"></div>
@@ -74,8 +65,8 @@ export const Footer = () => {
           </div>
         </div>
         <div className="padding__section section__background--dark">
-        Creado por @Juan Francia Sánchez
-      </div>
+          Creado por @Juan Francia Sánchez
+        </div>
       </footer>
     </>
   );

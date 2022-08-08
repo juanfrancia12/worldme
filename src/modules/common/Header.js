@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -10,8 +10,7 @@ import { OptionsHeader } from "common/constants/OptionsHeader";
 
 export const Header = () => {
   const { isMenuToggle, onMenuToggle } = useMenuToggle();
-
-  const countCart = 1;
+  const [countCartProduct, setCountCartProduct] = useState(0);
 
   return (
     <>
@@ -60,9 +59,13 @@ export const Header = () => {
               <div className="options__content" key={id}>
                 <div
                   className={`options__item ${name === "Carrito" &&
-                    countCart > 0 &&
+                    countCartProduct > 0 &&
                     "options__item--cart"}`}
-                  data-number={name === "Carrito" && countCart > 0 && countCart}
+                  data-number={
+                    name === "Carrito" &&
+                    countCartProduct > 0 &&
+                    countCartProduct
+                  }
                 >
                   {icon}
                   {name}

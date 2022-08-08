@@ -1,5 +1,5 @@
 import React from "react";
-import Sports from "../../modules/sports/interface";
+import Sports from "../../modules/sports";
 
 const index = () => {
   return <Sports />;

@@ -70,7 +70,6 @@ const SectionSubscribe = () => {
                 value="politica"
                 defaultChecked={acceptPolitic}
                 onClick={() => setAcceptPolitic(!acceptPolitic)}
-                // onClick={() => alert("hola click")}
               />
               <p>
                 He leído y acepto la{" "}
@@ -79,7 +78,10 @@ const SectionSubscribe = () => {
                 </strong>
               </p>
             </label>
-            <button type="submit" className="button button__secondary button__form">
+            <button
+              type="submit"
+              className="button button__secondary button__form"
+            >
               Enviar
             </button>
           </form>
