@@ -9,13 +9,13 @@
 // 2. Vendors
 
 // 5. Components
-@import "components/button", "components/spinner", "components/subscribe", "components/action-message";
+@import "components/button", "components/spinner", "components/subscribe", "components/action-message", "components/banner", "components/accordion";
 
 // 4. Layout-related sections
 @import "layout/header", "layout/layout", "layout/footer";
 
 // 6. Page-specific styles
-@import "view/home";
+@import "view/common", "view/home";
 
 // 7. Themes
 // @import "themes/dark";

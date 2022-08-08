@@ -15,14 +15,14 @@ export const Footer = () => {
         <ButtonScrollTop />
         <div className="footer__container grid__layout">
           <div className="footer__item">
-            <h3 className="title">WorldMe</h3>
+            <h3 className="title title__section">WorldMe</h3>
             <p className="description position__left">
               Somos una empresa de venta de ropa para niños, hombre y mujeres;
               para toda ocasión.
             </p>
           </div>
           <div className="footer__item">
-            <h3 className="title">Enlaces</h3>
+            <h3 className="title title__section">Enlaces</h3>
             <nav>
               <ul className="footer__nav position__left">
                 <li>
@@ -59,7 +59,7 @@ export const Footer = () => {
             </nav>
           </div>
           <div className="footer__item">
-            <h3 className="title">Contáctanos</h3>
+            <h3 className="title title__section">Contáctanos</h3>
             <div className="footer__contact position__left">
               <Link to="https://www.instagram.com">
                 <AiFillInstagram className="icon icon__contact" />

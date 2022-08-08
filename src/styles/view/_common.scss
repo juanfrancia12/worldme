@@ -1,0 +1,112 @@
+.grid {
+  &__secondary {
+    display: grid;
+    // grid-template-columns: repeat(auto-fit, minmax(auto, 1fr));
+
+      grid-template-areas:
+      "filters filters filters"
+      "content content content"
+      "content content content";
+    gap: 2rem;
+    @include tablet {
+      grid-template-areas:
+        "filters filters filters"
+        "content content content"
+        "content content content";
+      }
+      @include desktop {
+        grid-template-areas:
+        "filters content content content content"
+        "filters content content content content"
+        "filters content content content content";
+        grid-template-columns: 2fr 6fr;
+      }
+  }
+}
+
+.section {
+  &__filters {
+    grid-area: filters;
+    width: 100%;
+    // background-color: #f4f4f4;
+    // padding: 1rem 0.5rem;
+  }
+  &__content {
+    grid-area: content;
+    width: 100%;
+    // background-color: #f4f4f4;
+    // padding: 1rem 0.5rem;
+    &--heading {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      // padding: 0 1rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+
+      @include desktop {
+        flex-wrap: nowrap;
+      }
+    }
+    &--list {
+      // padding: 0 1rem;
+    }
+  }
+  &__list {
+    &--count{
+      width: 100%;
+    }
+    &--options {
+      width: 100%;
+      display: grid;
+      // justify-content: center;
+      // align-items: center;
+      gap: 1rem;
+      // flex-wrap: wrap;
+      // flex-grow: 1;
+
+      @include desktop {
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+  }
+}
+
+.select {
+  // width: 250px;
+  position: relative;
+
+  &:hover i {
+    margin-top: 3px;
+  }
+
+  select {
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    background: #ffff;
+    color: #999;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.3rem;
+    position: relative;
+    transition: all 0.25s ease;
+
+    &:hover {
+      background: rgb(237, 237, 237);
+    }
+  }
+
+  i {
+    position: absolute;
+    right: 20px;
+    top: calc(50% - 0.25rem);
+    width: 0.8rem;
+    height: 0.5rem;
+    background-color: gray;
+    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+    transition: all 0.25s ease;
+  }
+}

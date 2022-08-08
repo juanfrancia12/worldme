@@ -13,7 +13,7 @@ export const OptionsHeader = [
   },
   {
     id: 3,
-    icon: <FaShoppingCart className="icon" />,
+    icon: <FaShoppingCart className="icon icon__cart" />,
     name: "Carrito",
   },
 ];

@@ -2,10 +2,10 @@
   font-weight: bold;
   font-size: 1.4rem;
   line-height: 120%;
-  margin: 0 auto;
+  margin: auto 0;
 
   &__section {
-    margin: auto 0;
+    margin: 0 auto;
   }
 
   &__additional {
@@ -40,6 +40,7 @@
 }
 
 .subtitle {
+  font-size: 1.2rem;
 }
 
 .input {
@@ -49,6 +50,10 @@
   cursor: pointer;
   height: 1rem;
   box-sizing: border-box;
+
+  &__cart{
+    
+  }
 
   &__contact {
     background-color: rgba(128, 128, 128, 0.6);
@@ -111,6 +116,7 @@
   padding: 0.6rem 1.3rem;
   border-radius: 0.2rem;
   cursor: pointer;
+  pointer-events: all;
 
   @include less_mobile {
     padding: 0.5rem 0.8rem;
@@ -173,6 +179,17 @@
     width: 50%;
     padding: 0;
     margin: 1.5rem auto;
+
+    &--secondary{
+      width: 100%;
+      border-top: 0.1rem solid #d3d3d3;
+    }
+
+    &--accordion {
+      width: 100%;
+      margin: 0.5rem auto;
+      border-top: 0.1rem solid #d3d3d3;
+    }
   }
 }
 
@@ -194,4 +211,12 @@
 
 .image {
   border-radius: 0.3rem;
+}
+
+.text{
+  &__ellipsis{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
 }

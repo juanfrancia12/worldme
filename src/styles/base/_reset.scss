@@ -11,6 +11,10 @@
     color: #fff;
   }
 
+  &:focus {
+    outline: none;
+  }
+
   // &::focus {
   //   outline-color: transparent;
   //   outline-style: none;
@@ -195,6 +199,20 @@ body {
   min-height: 100vh;
   color: #2d3436;
   background-color: #fcfcfc;
+  // background: url("../../../public/background.svg");
+  // background-size:contain;
+  // background-position:top;
+  // background: cover;
+}
+
+select{
+  outline: none;
+  border: none;
+  display: block;
+
+  &::-ms-expand {
+    display: none;
+  }
 }
 
 img {
@@ -211,9 +229,11 @@ strong {
 
 input{
   outline: none;
-  padding: 0.9rem 1rem;
+  padding: 0.5rem 1rem;
   border: 1px solid rgb(168, 168, 168);
   border-radius: 5px;
+  background: #ffff;
+  color: #999;
 
   &:focus{
     border: 1px solid rgb(129, 129, 129);

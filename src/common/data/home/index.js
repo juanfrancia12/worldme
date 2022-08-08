@@ -1,3 +1,5 @@
+// import { lazy } from "react";
+
 import { MdDeliveryDining, MdPublishedWithChanges } from "react-icons/md";
 import { FaUserLock, FaStore } from "react-icons/fa";
 
@@ -28,7 +30,10 @@ import new3 from "common/assets/image/home/news/3.jpg";
 
 import subscribe from "common/assets/image/home/news/1.jpg";
 
-export const Data = {
+// const MdDeliveryDining = lazy(() => import("react-icons/md"));
+// const MdPublishedWithChanges = lazy(() => import("react-icons/md"));
+
+export const data = {
   recommended: [
     {
       id: 1,
@@ -65,10 +70,9 @@ export const Data = {
     {
       id: 2,
       image: women2,
-      name: "WorldMe",
-      description: "Laboriosam voluptatem et consectetur.",
+      name: "Chompa",
+      description: "Laboriosam voluptatem et consectetur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quas consectetur numquam sed, sint nostrum ipsa rem autem temporibus, molestiae facilis. Incidunt libero consequatur ipsa culpa expedita deleniti architecto ad?. Magnam recusandae dignissimos odio ducimus culpa. Libero sapiente laboriosam, voluptate ipsa tenetur optio non voluptates dicta labore, mollitia perferendis dolore corporis quos quis quaerat nam repellat error explicabo asperiores sed",
       price_old: 50.99,
-      price_new: 46.99,
       islarge: false,
       discount: {
         type: "percentage",
@@ -78,10 +82,9 @@ export const Data = {
     {
       id: 3,
       image: women3,
-      name: "WorldMe",
+      name: "Casaca",
       description: "Laboriosam voluptatem et consectetur.",
       price_old: 40.99,
-      price_new: 22.99,
       islarge: false,
       discount: {
         type: "money",
@@ -90,11 +93,10 @@ export const Data = {
     },
     {
       id: 4,
-      image: women3,
-      name: "WorldMe",
+      image: women2,
+      name: "Polo",
       description: "Laboriosam voluptatem et consectetur.",
       price_old: 60.99,
-      price_new: 52.99,
       islarge: false,
       discount: {
         type: "percentage",
@@ -104,10 +106,9 @@ export const Data = {
     {
       id: 5,
       image: women3,
-      name: "WorldMe",
+      name: "Blusa",
       description: "Laboriosam voluptatem et consectetur.",
       price_old: 150.99,
-      price_new: 99.99,
       islarge: false,
       discount: {
         type: "percentage",
@@ -119,7 +120,7 @@ export const Data = {
     {
       id: 1,
       image: men1,
-      name: "Worldme",
+      name: "Casaca hombre",
       description: "Laboriosam voluptatem et consectetur.",
       price_old: 40.99,
       price_new: 22.99,
@@ -132,7 +133,7 @@ export const Data = {
     {
       id: 2,
       image: men2,
-      name: "WorldMe",
+      name: "Chompa hombre",
       description: "Laboriosam voluptatem et consectetur.",
       price_old: 50.99,
       price_new: 46.99,
@@ -144,8 +145,8 @@ export const Data = {
     },
     {
       id: 3,
-      image: men2,
-      name: "WorldMe",
+      image: men1,
+      name: "Camisa hombre",
       description: "Laboriosam voluptatem et consectetur.",
       price_old: 52.99,
       price_new: 45.99,
@@ -158,7 +159,7 @@ export const Data = {
     {
       id: 4,
       image: men2,
-      name: "WorldMe",
+      name: "Pantalon hombre",
       description: "Laboriosam voluptatem et consectetur.",
       price_old: 43.99,
       price_new: 28.99,
@@ -210,7 +211,7 @@ export const Data = {
     },
     {
       id: 4,
-      image: boy3,
+      image: boy2,
       name: "WorldMe",
       description: "Laboriosam voluptatem et consectetur.",
       price_old: 40.99,
@@ -264,7 +265,7 @@ export const Data = {
     },
     {
       id: 3,
-      image: sport2,
+      image: sport1,
       name: "WorldMe",
       description: "Laboriosam voluptatem et consectetur.",
       price_old: 98.99,
@@ -337,4 +338,5 @@ export const Data = {
   subscribe: {
     image: subscribe,
   },
+  promotions : []
 };

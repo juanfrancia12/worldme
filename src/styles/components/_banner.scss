@@ -1,0 +1,20 @@
+.banner {
+display: grid;
+display: flex;
+flex-direction: column;
+gap: 2rem;
+
+  &__image {
+    width: 100%;
+    // height: 25rem;
+    height: clamp(10rem, 50vw, 25rem);
+    background-color: #ecec;
+    margin: 0;
+    overflow: hidden;
+    border-radius: 0.3rem;
+
+    img:hover {
+      transform: none;
+    }
+  }
+}

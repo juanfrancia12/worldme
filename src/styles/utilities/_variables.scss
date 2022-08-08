@@ -5,13 +5,15 @@ $breakpoint__desktop: 1300px;
 $breakpoint: (
   "less_mobile": 450px,
   "mobile": 780px,
-  "last_mobile": 533px, // 540px
+  "last_mobile": 533px,
+  // 540px
   "tablet": 1000px,
   "desktop": 1300px,
 );
 
 $global: (
-  "min__height--header": 4rem, // 1rem
+  "min__height--header": 4rem,
+  // 1rem
   "padding__mobile": 0 1rem,
   "padding__tablet": 0 2.5rem,
   "padding__desktop": 0 4rem,

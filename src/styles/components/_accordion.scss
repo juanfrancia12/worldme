@@ -1,0 +1,57 @@
+.accordion {
+  width: 100%;
+  display: grid;
+  gap: 1rem;
+
+  &__item {
+    border: 1px solid #e6e6e6;
+  }
+}
+
+.accordion__button {
+  border: 0;
+  // margin: 10px 0;
+  // padding: 20px;
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: inherit;
+  cursor: pointer;
+  background: #dddddd;
+}
+
+.accordion__button span {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background: #000;
+  font-size: 15px;
+}
+
+.accordion__button:focus {
+  outline: none;
+}
+
+.accordion__content {
+  padding: 0 20px;
+  opacity: 0;
+  // transition: .5s;
+  transition: 0.15s linear;
+  height: 0;
+  margin-top: -10px;
+  border: 1px solid #f1f1f1;
+  border-top: 0;
+  background: #fff;
+}
+
+.accordion__content.active {
+  height: auto;
+  opacity: 1;
+  padding: 20px;
+}

@@ -7,10 +7,11 @@ import { AiOutlineClose } from "react-icons/ai";
 import { useMenuToggle } from "common/hooks/useMenuToggle";
 import { LinksHeader, LinkHome } from "common/constants/LinksHeader";
 import { OptionsHeader } from "common/constants/OptionsHeader";
-import { NAME_COMPANY } from "common/constants/Company";
 
 export const Header = () => {
   const { isMenuToggle, onMenuToggle } = useMenuToggle();
+
+  const countCart = 1;
 
   return (
     <>
@@ -56,9 +57,16 @@ export const Header = () => {
           {OptionsHeader.map((item) => {
             const { id, icon, name } = item;
             return (
-              <div key={id} className="options__item">
-                {icon}
-                {name}
+              <div className="options__content" key={id}>
+                <div
+                  className={`options__item ${name === "Carrito" &&
+                    countCart > 0 &&
+                    "options__item--cart"}`}
+                  data-number={name === "Carrito" && countCart > 0 && countCart}
+                >
+                  {icon}
+                  {name}
+                </div>
               </div>
             );
           })}

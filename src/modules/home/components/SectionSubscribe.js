@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import swal from "sweetalert";
 
-import { Data } from "common/data/home/index.js";
+import { data } from "common/data/home/index.js";
 import { ActionMessage } from "modules/common/ActionMessage";
 
 const SectionSubscribe = () => {
@@ -41,7 +41,7 @@ const SectionSubscribe = () => {
   return (
     <>
       <section className="padding__section section grid__layout--2 subscribe">
-        <img src={Data.subscribe.image} alt="" className="image" />
+        <img src={data.subscribe.image} alt="" className="image" />
         <div className="subscribe__container">
           <p className="title title__subscribe">
             Suscríbete a nuestro boletín y recibe 10% de dscto. en tu primera

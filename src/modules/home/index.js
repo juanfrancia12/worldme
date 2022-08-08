@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 
-import { Data } from "common/data/home/index.js";
+// import { data} from "common/data/home/index.js";
+import { useProducts } from 'common/hooks/useProducts';
+
 
 import SectionHeading from "./components/SectionHeading";
 import SectionRecommended from "./components/SectionRecommended";
@@ -8,8 +10,10 @@ import SectionHomeCards from "./components/SectionHomeCards";
 import SectionAdditional from "./components/SectionAdditional";
 import SectionSubscribe from "./components/SectionSubscribe";
 
-const Home = () => {
+const Index = () => {
   const [dataSlice, setDataSlice] = useState(5);
+
+  const { products } = useProducts()
 
   useEffect(() => {
     const updateWidth = () => {
@@ -31,43 +35,47 @@ const Home = () => {
       <section className="section__grid--gap">
         <section className="padding__section section">
           <SectionHeading title="Recomendado para ti" />
-          <SectionRecommended data={Data.recommended} />
+          <SectionRecommended data={products.recommended} />
         </section>
 
         <SectionHomeCards
-          data={Data.women}
+          data={products.women}
           islargeleft={true}
           dataSlice={dataSlice}
           isleft={true}
+          category="women"
         />
 
         <SectionHomeCards
-          data={Data.men}
+          data={products.men}
           islargeleft={false}
           dataSlice={dataSlice}
           isleft={false}
+          category="men"
         />
 
         <SectionHomeCards
-          data={Data.boys}
+          data={products.boys}
           islargeleft={true}
           dataSlice={dataSlice}
           isleft={true}
+          category="boys"
         />
 
         <SectionHomeCards
-          data={Data.sports}
+          data={products.sports}
           islargeleft={false}
           dataSlice={dataSlice}
           isleft={false}
+          category="sports"
         />
 
         <section className="padding__section section">
           <SectionHeading title="Nuevos Lanzamientos" />
-          <SectionRecommended data={Data.news} shortHeight={true} />
+          <SectionRecommended data={products.news} shortHeight={true} />
         </section>
 
-        <SectionAdditional data={Data.additional} />
+        <SectionAdditional data={products.additional} />
 
         <SectionSubscribe />
       </section>
@@ -75,8 +83,4 @@ const Home = () => {
   );
 };
 
-const index = () => {
-  return <Home />;
-};
-
-export default index;
+export default Index;
